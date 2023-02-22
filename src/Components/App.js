@@ -1,11 +1,12 @@
 import '../Stylesheets/App.css';
 import { getData } from '../api-calls';
 import { useState, useEffect } from 'react';
-import { Route, useNavigate } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
+import Home from './Home'
+import DetailView from './DetailView'
 
-function App() {
+export default function App() {
   const apiKey = process.env.REACT_APP_NYT_KEY
-  console.log(process.env.REACT_APP_NYT_KEY)
 
   const [data, setData] = useState(null)
   const [articles, setArticles] = useState(null)
@@ -16,14 +17,12 @@ function App() {
     let count = 1
     getData(url)
       .then(data => {
-        setArticles(() => {
-          data.results.map(result => {
-            return {count: result}
-            count ++
-          })
+        data.results.forEach(result => {
+          result.id = count
+          count++
         })
-        setData(data)
-        })
+        setArticles(data.results)
+      })
       .catch(error => {
         console.log(error)
       })
@@ -31,18 +30,24 @@ function App() {
 
   return (
     <>
-      <Route 
-        path="/"
-        element={<Home articles={ articles } />}
-      />
-      <Route
-        path="/:id"
-        element={<DetailView 
-        articles={articles}
-        />}
-      />
+      <Routes>
+        <Route 
+          path="/"
+          element={
+            articles && <Home 
+              articles={ articles } 
+            />
+          }
+        />
+        <Route
+          path="/:id"
+          element={
+            <DetailView 
+              articles={articles}
+            />
+          }
+        />
+      </Routes>
     </>
   );
 }
-
-export default App;
