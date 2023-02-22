@@ -9,9 +9,8 @@ export default function Home({ articles }) {
       articles.map(article => {
         return (
           <ArticleCard
-            key={article.id}
-            title={article.title}
-            id={article.id}
+            key={ article.id }
+            article={ article }
           />
         )
       })
