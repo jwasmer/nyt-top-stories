@@ -2,7 +2,6 @@ import '../Stylesheets/App.css';
 import { getData } from '../api-calls';
 import { useState, useEffect } from 'react';
 import { Route, useNavigate } from "react-router-dom"
-import ArticleCard from './ArticleCard';
 
 function App() {
   const apiKey = process.env.REACT_APP_NYT_KEY
