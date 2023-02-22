@@ -1,16 +1,20 @@
 import "../Stylesheets/ArticleCard.css"
 import { useNavigate } from "react-router-dom"
 
-export default function ArticleCard({ title, id }) {
+export default function ArticleCard({ article }) {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/${id}`)
+    navigate(`/${article.id}`, {
+      state: {
+        content: article
+      }
+    })
   }
 
   return (
     <li className="list-item" onClick={handleClick}>
-      <h5>{title}</h5>
+      <h5>{article.title}</h5>
     </li>
   )
 }
