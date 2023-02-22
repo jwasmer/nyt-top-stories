@@ -14,7 +14,7 @@ export default function App() {
   const [url, setUrl] = useState(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`)
 
   useEffect(() => {
-    let count = 1
+    let count = 0
     getData(url)
       .then(data => {
         data.results.forEach(result => {
@@ -42,9 +42,7 @@ export default function App() {
         <Route
           path="/:id"
           element={
-            <DetailView 
-              articles={articles}
-            />
+            <DetailView />
           }
         />
       </Routes>
