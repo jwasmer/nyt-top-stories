@@ -1,6 +1,7 @@
 import './App.css';
 import { getData } from './api-calls';
 import { useState, useEffect } from 'react';
+import { createBrowserRouter } from 'react-router-dom'
 
 function App() {
   const apiKey = process.env.REACT_APP_NYT_KEY
@@ -24,7 +25,7 @@ function App() {
     console.log('buildHeadlineCards fired')
     return data.results.map(result => {
       return (
-      <div>
+      <div onClick>
         {result.title}
       </div>
       )
