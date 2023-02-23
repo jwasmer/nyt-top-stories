@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Route, Routes } from "react-router-dom"
 import Home from './Home'
 import DetailView from './DetailView'
+import Search from './Search';
 
 export default function App() {
   const apiKey = process.env.REACT_APP_NYT_KEY
@@ -21,6 +22,7 @@ export default function App() {
           result.id = count
           count++
         })
+        setData(data.results)
         setArticles(data.results)
       })
       .catch(error => {
@@ -30,6 +32,10 @@ export default function App() {
 
   return (
     <>
+      {articles && <Search
+        data={ data }
+        setArticles={ setArticles }
+      />}
       <Routes>
         <Route 
           path="/"
