@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# NYT Top Stories Feed
+### Home Page
+![Screen Shot 2023-02-23 at 6 30 44 AM](https://user-images.githubusercontent.com/110298370/220894104-075c7786-59a0-4371-a810-230e0035e802.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Article View
+![Screen Shot 2023-02-23 at 6 30 33 AM](https://user-images.githubusercontent.com/110298370/220894111-2d21c889-175c-4ec8-9020-9b715a23bd1a.png)
 
-## Available Scripts
+## Project Overview
+This project was designed and built within an 8-hour sprint as a practice exercise. The goal of the app is to provide a simple UI through which a user can access articles provided by the New York Times Top Stories API. The project includes the ability to fetch articles across multiple publication sections (e.g. "Arts", "Politics", etc) and to further narrow the search using a search bar to return matches within an article's headline.
 
-In the project directory, you can run:
+## Goals
+- Deliver a functional app within an 8-hour sprint
+- Incorporate the NYT Top Stories API
+- Include search and/or sort functionality
 
-### `npm start`
+## Installation
+- Clone the repository
+- Navigate to the project directory
+- Install project dependencies (`npm install` or similar)
+- Start the project (`npm start` or similar)
+- If a browser window does not automatically open, navigate to [http://localhost:3000/](http://localhost:3000/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Using the App
+The app's home page is a list of the default "home" articles provided by the NYT Top Stories API. These can be refined by using the search bar above. Clicking the magnifying glass icon or pressing the 'Enter' key will execute the search, and clicking the X icon will clear the search bar.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Additionally, you can view sections of the NYT Top Stories other than the default "home" section by using the dropdown menu in the top right. Selecting a different section using the dropdown menu will load all stories within that specific category.
 
-### `npm test`
+You can click on individual article headlines to open a more detailed summary of the article. These summaries contain a link to the full NYT story, allowing you to follow through to the main website if the detailed summary catches your eye. If not, the back button will return you to the home page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Wireframe
+![Screen Shot 2023-02-23 at 6 27 37 AM](https://user-images.githubusercontent.com/110298370/220896857-1c6a425d-1af7-4241-b9dd-498ce953bc4d.png)
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Sole Contributor: [James Wasmer](https://github.com/jwasmer)
