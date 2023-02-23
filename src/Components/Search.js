@@ -51,7 +51,7 @@ export default function Search({ data, setArticles, setSection }) {
         </button>
       </div>
       <div className="menu-wrapper">
-        <label htmlFor="section-select">Category:</label>
+        <label className="menu-label" htmlFor="section-select">Category:  </label>
         <select className="menu" name="sections" id="section-select" defaultValue="home" onClick={(event) => {console.log(event.target)}} onChange={(event) => {handleChange(event)}}>
           <option value="arts">Arts</option>
           <option value="automobiles">Automobiles</option>
