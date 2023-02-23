@@ -12,9 +12,19 @@ export default function ArticleCard({ article }) {
     })
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      navigate(`/${article.id}`, {
+        state: {
+          content: article
+        }
+      })
+    }
+  }
+
   return (
-    <li className="list-item" onClick={handleClick}>
+    <li tabindex="0" className="list-item" onClick={handleClick} onKeyDown={handleKeyDown}>
       <h5 className="article-title">{article.title}</h5>
     </li>
   )
-}
+}       

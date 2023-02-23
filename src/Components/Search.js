@@ -4,7 +4,8 @@ import { useState } from "react"
 export default function Search({ data, setArticles, setSection }) {
   const [search, setSearch] = useState('')
 
-  const clearSearch = () => {
+  const clearSearch = (event) => {
+    event.preventDefault()
     setSearch('')
     getSearchResults('', data, setArticles)
   }
@@ -29,7 +30,8 @@ export default function Search({ data, setArticles, setSection }) {
     }
   }
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    event.preventDefault()
     getSearchResults(search, data, setArticles)
   }
 
@@ -37,12 +39,12 @@ export default function Search({ data, setArticles, setSection }) {
     <form className="search">
       <div className="search-wrapper">
         <input className="search-input" type="text" value={search} placeholder="Enter search..." onChange={(event) => {handleChange(event)}}></input>
-        <button className="button" onClick={handleClick}>
+        <button className="button" onClick={(event) => {handleClick(event)}}>
           <span className="material-symbols-outlined">
             search
           </span>
         </button>
-        <button className="button" onClick={clearSearch}>
+        <button className="button" onClick={(event) => {clearSearch(event)}}>
           <span className="material-symbols-outlined">
             close
           </span>
