@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export default function Search({ data, setArticles }) {
+export default function Search({ data, setArticles, setSection }) {
   const [search, setSearch] = useState('')
 
   const clearSearch = () => {
@@ -21,7 +21,11 @@ export default function Search({ data, setArticles }) {
   }
 
   const handleChange = (event) => {
+    if (event.target.id === "section-select") {
+      setSection(event.target.value)
+    } else {
     setSearch(event.target.value)
+    }
   }
 
   const handleClick = () => {
@@ -34,7 +38,7 @@ export default function Search({ data, setArticles }) {
       <button onClick={handleClick}>Search!</button>
       <button onClick={clearSearch}>Clear</button>
       <label htmlFor="section-select">Choose a category:</label>
-      <select name="sections" selected="home" id="section-select">
+      <select name="sections" id="section-select" defaultValue="home" onClick={(event) => {console.log(event.target)}} onChange={(event) => {handleChange(event)}}>
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>
         <option value="books">Books</option>

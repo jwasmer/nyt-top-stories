@@ -15,6 +15,10 @@ export default function App() {
   const [url, setUrl] = useState(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`)
 
   useEffect(() => {
+    setUrl(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=${apiKey}`)
+  }, [section])
+
+  useEffect(() => {
     let count = 0
     getData(url)
       .then(data => {
@@ -28,13 +32,14 @@ export default function App() {
       .catch(error => {
         console.log(error)
       })
-  }, [])
+  }, [url])
 
   return (
     <>
       {articles && <Search
         data={ data }
         setArticles={ setArticles }
+        setSection={ setSection }
       />}
       <Routes>
         <Route 
@@ -42,6 +47,7 @@ export default function App() {
           element={
             articles && <Home 
               articles={ articles } 
+              section={ section }
             />
           }
         />
