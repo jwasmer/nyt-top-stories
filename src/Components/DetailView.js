@@ -1,3 +1,4 @@
+import '../Stylesheets/DetailView.css';
 import { useLocation, Link } from "react-router-dom"
 
 export default function DetailView() {
