@@ -24,7 +24,8 @@ export default function DetailView() {
       {displayImage()}
       <p className="font">{article.abstract}</p>
       <p className="font">{article.byline}, {getDate(article.created_date)}</p>
-      <Link to={article.short_url}>Read the full story here.</Link>
+      <Link className="link" to={article.short_url}>Read the full story here.</Link>
+      <Link className="link" to="/">Back</Link>
     </div>
   )
 }

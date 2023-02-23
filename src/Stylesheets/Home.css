@@ -1,6 +1,20 @@
+.section-label {
+  font-family: Domine;
+  margin-left: 24px;
+}
+
+.article-card-list {
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 480px) {
   .article-card-wrapper {
     max-width: 375px;
+  }
+
+  .section-label {
+    display: none;
   }
 }
 
@@ -11,12 +25,3 @@
   }
 }
 
-.section-label {
-  font-family: Domine;
-  margin-left: 24px;
-}
-
-.article-card-list {
-  margin: 0;
-  padding: 0;
-}
