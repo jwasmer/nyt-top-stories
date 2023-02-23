@@ -1,20 +1,39 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
-export default function Search() {
+export default function Search({ data, setArticles }) {
   const [search, setSearch] = useState('')
+
+  const clearSearch = () => {
+    setSearch('')
+    getSearchResults('', data, setArticles)
+  }
+
+  const getSearchResults = (search, data, setArticles) => {
+    setArticles(() => {
+      return data.filter(article => {
+        const isMatch = article.title.includes(search)
+
+        if (isMatch) {
+          return article
+        }
+      })
+    })
+  }
 
   const handleChange = (event) => {
     setSearch(event.target.value)
   }
 
-  const clearSearch = () => {
-    setSearch('')
+  const handleClick = () => {
+    getSearchResults(search, data, setArticles)
   }
 
   return (
     <div>
       <input type="text" value={search} placeholder="Enter search..." onChange={(event) => {handleChange(event)}}></input>
-      <label for="section-select">Choose a category:</label>
+      <button onClick={handleClick}>Search!</button>
+      <button onClick={clearSearch}>Clear</button>
+      <label htmlFor="section-select">Choose a category:</label>
       <select name="sections" selected="home" id="section-select">
         <option value="arts">Arts</option>
         <option value="automobiles">Automobiles</option>
