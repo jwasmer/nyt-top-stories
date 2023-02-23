@@ -38,12 +38,12 @@ export default function Search({ data, setArticles, setSection }) {
       <div className="search-wrapper">
         <input className="search-input" type="text" value={search} placeholder="Enter search..." onChange={(event) => {handleChange(event)}}></input>
         <button className="button" onClick={handleClick}>
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
             search
           </span>
         </button>
         <button className="button" onClick={clearSearch}>
-          <span class="material-symbols-outlined">
+          <span className="material-symbols-outlined">
             close
           </span>
         </button>
@@ -60,7 +60,6 @@ export default function Search({ data, setArticles, setSection }) {
           <option value="health">Health</option>
           <option value="home">Home</option>
           <option value="insider">Insider</option>
-          <option value="magazine">Magazine</option>
           <option value="movies">Movies</option>
           <option value="nyregion">NY Region</option>
           <option value="obituaries">Obituaries</option>
