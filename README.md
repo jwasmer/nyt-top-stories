@@ -1,12 +1,13 @@
 # NYT Top Stories Feed
+
+## Project Overview
+This project was designed and built within an 8-hour sprint as a practice exercise. The goal of the app is to provide a simple UI through which a user can access articles provided by the New York Times Top Stories API. The project includes the ability to fetch articles across multiple publication sections (e.g. "Arts", "Politics", etc) and to further narrow the search using a search bar to return matches within an article's headline.
+
 ### Home Page
 ![Screen Shot 2023-02-23 at 6 30 44 AM](https://user-images.githubusercontent.com/110298370/220894104-075c7786-59a0-4371-a810-230e0035e802.png)
 
 ### Article View
 ![Screen Shot 2023-02-23 at 6 30 33 AM](https://user-images.githubusercontent.com/110298370/220894111-2d21c889-175c-4ec8-9020-9b715a23bd1a.png)
-
-## Project Overview
-This project was designed and built within an 8-hour sprint as a practice exercise. The goal of the app is to provide a simple UI through which a user can access articles provided by the New York Times Top Stories API. The project includes the ability to fetch articles across multiple publication sections (e.g. "Arts", "Politics", etc) and to further narrow the search using a search bar to return matches within an article's headline.
 
 ## Goals
 - Deliver a functional app within an 8-hour sprint
