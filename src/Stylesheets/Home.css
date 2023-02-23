@@ -15,3 +15,8 @@
   font-family: Domine;
   margin-left: 24px;
 }
+
+.article-card-list {
+  margin: 0;
+  padding: 0;
+}

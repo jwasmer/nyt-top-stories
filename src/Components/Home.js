@@ -26,7 +26,9 @@ export default function Home({ articles, section }) {
   return (
     <div className="article-card-wrapper">
       <h2 className="section-label">{sectionsList[section]}</h2>
-      {articleCards}
+      <ul className="article-card-list">
+        {articleCards}
+      </ul>
     </div>
   )
 }
