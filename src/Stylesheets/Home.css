@@ -1,0 +1,17 @@
+@media (max-width: 480px) {
+  .article-card-wrapper {
+    max-width: 375px;
+  }
+}
+
+@media (min-width: 481px) {
+  .article-card-wrapper {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+.section-label {
+  font-family: Domine;
+  margin-left: 24px;
+}

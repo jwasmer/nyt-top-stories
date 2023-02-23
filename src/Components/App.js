@@ -35,7 +35,7 @@ export default function App() {
   }, [url])
 
   return (
-    <>
+    <main className="app-wrapper">
       {articles && <Search
         data={ data }
         setArticles={ setArticles }
@@ -58,6 +58,6 @@ export default function App() {
           }
         />
       </Routes>
-    </>
+    </main>
   );
 }

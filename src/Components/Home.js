@@ -1,3 +1,4 @@
+import '../Stylesheets/Home.css';
 import ArticleCard from './ArticleCard';
 import { useState, useEffect } from 'react';
 import { sectionsList } from '../sections';
@@ -23,8 +24,8 @@ export default function Home({ articles, section }) {
   }, [articles])
 
   return (
-    <div>
-      <h3>{sectionsList[section]}</h3>
+    <div className="article-card-wrapper">
+      <h2 className="section-label">{sectionsList[section]}</h2>
       {articleCards}
     </div>
   )

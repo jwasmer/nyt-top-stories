@@ -14,7 +14,7 @@ export default function ArticleCard({ article }) {
 
   return (
     <li className="list-item" onClick={handleClick}>
-      <h5>{article.title}</h5>
+      <h5 className="article-title">{article.title}</h5>
     </li>
   )
 }
